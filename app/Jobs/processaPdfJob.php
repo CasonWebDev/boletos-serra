@@ -2,7 +2,7 @@
 
 namespace App\Jobs;
 
-use App\Http\Services\processaPdf;
+use App\Http\Services\sintetizaPdf;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
@@ -16,19 +16,22 @@ class processaPdfJob implements ShouldQueue
     private $file;
     private $mes;
     private $ano;
+    private $page;
 
     public $timeout = 0;
+    public $tries = 3;
 
     /**
      * Create a new job instance.
      *
      * @return void
      */
-    public function __construct($file, $mes, $ano)
+    public function __construct($file, $mes, $ano, $page)
     {
         $this->file = storage_path("app/{$file}");
         $this->mes = $mes;
         $this->ano = $ano;
+        $this->page = $page;
     }
 
     /**
@@ -38,6 +41,6 @@ class processaPdfJob implements ShouldQueue
      */
     public function handle()
     {
-        processaPdf::processarPdf($this->file, $this->mes, $this->ano);
+        sintetizaPdf::sintetizarPdf($this->file, $this->mes, $this->ano, $this->page);
     }
 }

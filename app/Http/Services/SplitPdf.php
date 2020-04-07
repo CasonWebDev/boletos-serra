@@ -4,7 +4,6 @@
 namespace App\Http\Services;
 
 
-use App\Jobs\processaPdfJob;
 use Illuminate\Support\Facades\Storage;
 
 class SplitPdf
@@ -14,7 +13,7 @@ class SplitPdf
         $folderFiles = collect(Storage::files("public/pdfs/base/{$mes}/{$dia_vencimento}"));
 
         $folderFiles->map(function($file) use ($mes, $ano) {
-            processaPdfJob::dispatch($file, $mes, $ano);
+            processaPdf::processarPdf($file, $mes, $ano);
         });
     }
 }

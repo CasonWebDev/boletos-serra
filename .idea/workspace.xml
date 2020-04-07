@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7da88ee3-ff3e-4a7f-89f3-b53080bcec5d" name="Default Changelist" comment="" />
+    <list default="true" id="7da88ee3-ff3e-4a7f-89f3-b53080bcec5d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Services/sintetizaPdf.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Services/SplitPdf.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Services/SplitPdf.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Services/processaPdf.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Services/processaPdf.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Jobs/processaPdfJob.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Jobs/processaPdfJob.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,6 +19,9 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -116,6 +126,7 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1a3wplnldtuC8STrDDOvlD97Ttc" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -123,6 +134,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../cavinatto" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -156,7 +168,7 @@
       <option name="presentableId" value="Default" />
       <updated>1585977769096</updated>
       <workItem from="1585977770917" duration="6981000" />
-      <workItem from="1586218562915" duration="11147000" />
+      <workItem from="1586218562915" duration="12881000" />
     </task>
     <servers />
   </component>
@@ -168,17 +180,17 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="593" y="147" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860@0.0.1600.860" timestamp="1586226199049" />
-    <state x="530" y="186" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1586225056020">
+    <state x="530" y="186" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1586257137320">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="530" y="186" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1600.860@0.0.1600.860" timestamp="1586225056020" />
+    <state x="530" y="186" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1600.860@0.0.1600.860" timestamp="1586257137320" />
     <state x="580" y="186" key="FileChooserDialogImpl" timestamp="1586218606023">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="580" y="186" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1586218606023" />
-    <state x="523" y="245" key="NewPhpClassDialog" timestamp="1586234422987">
+    <state x="523" y="245" key="NewPhpClassDialog" timestamp="1586256864823">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="523" y="245" key="NewPhpClassDialog/0.0.1600.860@0.0.1600.860" timestamp="1586234422987" />
+    <state x="523" y="245" key="NewPhpClassDialog/0.0.1600.860@0.0.1600.860" timestamp="1586256864823" />
   </component>
 </project>
