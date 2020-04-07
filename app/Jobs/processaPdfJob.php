@@ -28,7 +28,7 @@ class processaPdfJob implements ShouldQueue
      */
     public function __construct($file, $mes, $ano, $page)
     {
-        $this->file = storage_path("app/{$file}");
+        $this->file = $file;
         $this->mes = $mes;
         $this->ano = $ano;
         $this->page = $page;

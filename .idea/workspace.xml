@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7da88ee3-ff3e-4a7f-89f3-b53080bcec5d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Services/sintetizaPdf.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Services/SplitPdf.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Services/SplitPdf.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Services/processaPdf.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Services/processaPdf.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Jobs/processaPdfJob.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Jobs/processaPdfJob.php" afterDir="false" />
     </list>
@@ -168,7 +165,7 @@
       <option name="presentableId" value="Default" />
       <updated>1585977769096</updated>
       <workItem from="1585977770917" duration="6981000" />
-      <workItem from="1586218562915" duration="12881000" />
+      <workItem from="1586218562915" duration="13464000" />
     </task>
     <servers />
   </component>

@@ -11,6 +11,7 @@ class processaPdf
 {
     public static function processarPdf($file, $mes, $ano)
     {
+        $file = storage_path("app/{$file}");
         $pdf = new Tfpdf\Fpdi();
         $pagecount = $pdf->setSourceFile($file);
 
