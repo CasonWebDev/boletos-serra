@@ -35,7 +35,7 @@ class sintetizaPdf
         $boleto->setAno($ano);
         $boleto->setArquivo("public/pdfs/{$subfolder}/{$boleto->getCpf()}.pdf");
 
-        if($boleto->getCpf() && !Storage::exists($boleto->getArquivo())) {
+        if($boleto->getCpf() && Storage::exists($boleto->getArquivo()) === false) {
             Storage::move("public/pdfs/file{$page}.pdf", $boleto->getArquivo());
             BoletoRepository::adicionarBoleto($boleto);
         } else {

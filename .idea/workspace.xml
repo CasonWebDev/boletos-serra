@@ -2,22 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7da88ee3-ff3e-4a7f-89f3-b53080bcec5d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/laravel-plugin.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Services/obterBoletos.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/Header.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/Home.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/routes/routes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/views/App.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/breakpoints.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SplitPdf.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SplitPdf.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Services/sintetizaPdf.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Services/sintetizaPdf.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,7 +173,7 @@
       <updated>1585977769096</updated>
       <workItem from="1585977770917" duration="6981000" />
       <workItem from="1586218562915" duration="20530000" />
-      <workItem from="1586304734691" duration="9481000" />
+      <workItem from="1586304734691" duration="10208000" />
     </task>
     <servers />
   </component>
