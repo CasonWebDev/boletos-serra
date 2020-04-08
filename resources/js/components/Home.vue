@@ -22,7 +22,7 @@
         </div>
         <div v-if="error" class="boletos">
             <p>Boleto não encontrado! Talvez você esteja cadastrado com outra forma de pagamento,
-                entre em contato através do nosso whatsapp 19 99240 6881
+                entre em contato através do nosso whatsapp <a href="https://bit.ly/2UuHy6g" target="_blank">19 99240 6881</a>
                 ou pelo e-mail <a href="mailto:">cobranca@gruposerra.com.br</a></p>
         </div>
     </div>
@@ -84,6 +84,9 @@
         p{
             font-size: 1.4em;
             margin-bottom: 1em;
+            a{
+                color: #2669a0;
+            }
         }
         input{
             @include for-size(phone-only) {
