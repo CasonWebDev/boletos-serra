@@ -6,6 +6,7 @@ namespace App\Http\Services;
 
 use App\Http\Classes\Boleto;
 use App\Http\Repository\BoletoRepository;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Storage;
 use Spatie\PdfToText\Pdf;
 use setasign\Fpdi\Tfpdf;
@@ -31,23 +32,35 @@ class sintetizaPdf
 
         $boleto->setCpf(self::getCpf($contentOriginal));
         $boleto->setNome(self::getNome($contentOriginal));
+        $boleto->setNossoNumero(self::getNossoNumero($contentOriginal));
+        $boleto->setDataVencimento(self::getDataVencimento($contentOriginal));
         $boleto->setMes($mes);
         $boleto->setAno($ano);
-        $boleto->setArquivo("public/pdfs/{$subfolder}/{$boleto->getCpf()}.pdf");
+        $boleto->setArquivo("public/pdfs/{$subfolder}/{$boleto->getNossoNumero()}.pdf");
 
-        if($boleto->getCpf() && Storage::exists($boleto->getArquivo()) === false) {
+        if($boleto->getNossoNumero() && Storage::exists($boleto->getArquivo()) === false) {
             Storage::move("public/pdfs/file{$page}.pdf", $boleto->getArquivo());
             BoletoRepository::adicionarBoleto($boleto);
         } else {
-            Storage::delete("public/pdfs/file{$page}.pdf");
+            if($page % 2 == 0){
+                Storage::delete("public/pdfs/file{$page}.pdf");
+            }
         }
     }
 
     protected static function getCpf($text)
     {
-        if (preg_match('/CPF: *([0-9-.]{11,14})/i', $text, $match)) {
+        if (preg_match('/([0-9]{3}[\.][0-9]{3}[\.][0-9]{3}[\-][0-9]{2})/i', $text, $match)) {
             $cpf = self::normalizeText($match[1]);
             $cpf = str_replace('.', '', $cpf);
+            return str_replace('-', '', $cpf);
+        }
+    }
+
+    protected static function getNossoNumero($text)
+    {
+        if (preg_match('/([0-9]{12}[\-][0-9]{1})/i', $text, $match)) {
+            $cpf = self::normalizeText($match[1]);
             return str_replace('-', '', $cpf);
         }
     }
@@ -56,6 +69,14 @@ class sintetizaPdf
     {
         if(preg_match('/Pagador\n(.*)[(]/', $text, $match)){
             return self::normalizeText($match[1]);
+        }
+    }
+
+    protected static function getDataVencimento($text)
+    {
+        if(preg_match('/BENEFICIÁRIO[)]\n\n(.*)/', $text, $match)){
+            $data = self::normalizeText($match[1]);
+            return Carbon::createFromFormat('d/m/Y', $data)->format('Y-m-d');
         }
     }
 

@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7da88ee3-ff3e-4a7f-89f3-b53080bcec5d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_04_11_185806_add_new_fields_boletos_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Classes/Boleto.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Classes/Boleto.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Repository/BoletoRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Repository/BoletoRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Services/sintetizaPdf.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Services/sintetizaPdf.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Jobs/processaPdfJob.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Jobs/processaPdfJob.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,7 +177,8 @@
       <updated>1585977769096</updated>
       <workItem from="1585977770917" duration="6981000" />
       <workItem from="1586218562915" duration="20530000" />
-      <workItem from="1586304734691" duration="11045000" />
+      <workItem from="1586304734691" duration="11731000" />
+      <workItem from="1586438186634" duration="9908000" />
     </task>
     <servers />
   </component>
@@ -181,10 +186,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="593" y="147" key="#com.intellij.ide.util.MemberChooser" timestamp="1586226199049">
+    <state x="593" y="147" key="#com.intellij.ide.util.MemberChooser" timestamp="1586631753500">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="593" y="147" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860@0.0.1600.860" timestamp="1586226199049" />
+    <state x="593" y="147" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860@0.0.1600.860" timestamp="1586631753500" />
     <state x="530" y="186" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1586314321024">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

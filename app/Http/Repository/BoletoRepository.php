@@ -16,6 +16,8 @@ class BoletoRepository
         $boletoModel->nome = $boleto->getNome();
         $boletoModel->arquivo = $boleto->getArquivo();
         $boletoModel->referencia = $boleto->getReferencia();
+        $boletoModel->nosso_numero = $boleto->getNossoNumero();
+        $boletoModel->data_vencimento = $boleto->getDataVencimento();
         $boletoModel->save();
     }
 }

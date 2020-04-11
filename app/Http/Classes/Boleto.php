@@ -11,6 +11,40 @@ class Boleto
     private $mes;
     private $ano;
     private $cpf;
+    private $nosso_numero;
+    private $data_vencimento;
+
+    /**
+     * @return mixed
+     */
+    public function getNossoNumero()
+    {
+        return $this->nosso_numero;
+    }
+
+    /**
+     * @param mixed $nosso_numero
+     */
+    public function setNossoNumero($nosso_numero): void
+    {
+        $this->nosso_numero = $nosso_numero;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDataVencimento()
+    {
+        return $this->data_vencimento;
+    }
+
+    /**
+     * @param mixed $data_vencimento
+     */
+    public function setDataVencimento($data_vencimento): void
+    {
+        $this->data_vencimento = $data_vencimento;
+    }
 
     /**
      * @return mixed
