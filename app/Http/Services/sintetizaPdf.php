@@ -34,8 +34,6 @@ class sintetizaPdf
         $boleto->setNome(self::getNome($contentOriginal));
         $boleto->setNossoNumero(self::getNossoNumero($contentOriginal));
         $boleto->setDataVencimento(self::getDataVencimento($contentOriginal));
-        $boleto->setMes($mes);
-        $boleto->setAno($ano);
         $boleto->setArquivo("public/pdfs/{$subfolder}/{$boleto->getNossoNumero()}.pdf");
 
         if($boleto->getNossoNumero() && Storage::exists($boleto->getArquivo()) === false) {

@@ -8,8 +8,6 @@ class Boleto
 {
     private $arquivo;
     private $nome;
-    private $mes;
-    private $ano;
     private $cpf;
     private $nosso_numero;
     private $data_vencimento;
@@ -99,15 +97,9 @@ class Boleto
      */
     public function getMes()
     {
-        return $this->mes;
-    }
-
-    /**
-     * @param mixed $mes
-     */
-    public function setMes($mes): void
-    {
-        $this->mes = $mes;
+        $vencimento = $this->data_vencimento;
+        $vencimento = explode('-', $vencimento);
+        return $vencimento[1];
     }
 
     /**
@@ -115,19 +107,13 @@ class Boleto
      */
     public function getAno()
     {
-        return $this->ano;
-    }
-
-    /**
-     * @param mixed $ano
-     */
-    public function setAno($ano): void
-    {
-        $this->ano = $ano;
+        $vencimento = $this->data_vencimento;
+        $vencimento = explode('-', $vencimento);
+        return $vencimento[0];
     }
 
     public function getReferencia()
     {
-        return "{$this->mes}/{$this->ano}";
+        return "{$this->getMes()}/{$this->getAno()}";
     }
 }
