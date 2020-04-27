@@ -12,7 +12,7 @@ class obterBoletos
 {
     public function obterBoleto($cpf)
     {
-        $data = boletos::where('cpf', $cpf)->get();
+        $data = boletos::where('cpf', $cpf)->orderBy('referencia')->get();
 
         $data->map(function($boleto) {
            $boleto->referencia = Carbon::createFromFormat('m/Y', $boleto->referencia)->translatedFormat('F/Y');
