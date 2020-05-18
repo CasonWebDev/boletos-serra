@@ -67,7 +67,7 @@ class sintetizaPdf
 
     protected static function getNome($text)
     {
-        if(preg_match('/Pagador\n(.*)[(]/', $text, $match)){
+        if(preg_match('/Pagador\n(.*)[(]/', $text, $match) || preg_match('/PAGADOR\n\n(.*) [CPF]/', $text, $match)){
             return self::normalizeText($match[1]);
         }
     }

@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7da88ee3-ff3e-4a7f-89f3-b53080bcec5d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_04_11_185806_add_new_fields_boletos_table.php" afterDir="false" />
+    <list default="true" id="7da88ee3-ff3e-4a7f-89f3-b53080bcec5d" name="Default Changelist" comment="Alteração processamento por arquivo PDF">
+      <change afterPath="$PROJECT_DIR$/app/Http/Services/deletaBoletos.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Jobs/DeletaBoletoJob.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Classes/Boleto.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Classes/Boleto.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SplitPdf.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SplitPdf.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Repository/BoletoRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Repository/BoletoRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Services/sintetizaPdf.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Services/sintetizaPdf.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Jobs/processaPdfJob.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Jobs/processaPdfJob.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,29 +179,67 @@
       <workItem from="1585977770917" duration="6981000" />
       <workItem from="1586218562915" duration="20530000" />
       <workItem from="1586304734691" duration="11731000" />
-      <workItem from="1586438186634" duration="9908000" />
+      <workItem from="1586438186634" duration="10584000" />
+      <workItem from="1586831315005" duration="600000" />
+      <workItem from="1587985676741" duration="3388000" />
+      <workItem from="1589814724257" duration="11681000" />
     </task>
+    <task id="LOCAL-00001" summary="Correção referencia por data de vencimento">
+      <created>1587988409063</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1587988409063</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Correção referencia por data de vencimento">
+      <created>1587989462197</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1587989462197</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Alteração processamento por arquivo PDF">
+      <created>1589837338790</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1589837338790</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Correção referencia por data de vencimento" />
+    <MESSAGE value="Alteração processamento por arquivo PDF" />
+    <option name="LAST_COMMIT_MESSAGE" value="Alteração processamento por arquivo PDF" />
   </component>
   <component name="WindowStateProjectService">
     <state x="593" y="147" key="#com.intellij.ide.util.MemberChooser" timestamp="1586631753500">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="593" y="147" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860@0.0.1600.860" timestamp="1586631753500" />
-    <state x="530" y="186" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1586314321024">
+    <state x="530" y="186" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1589829934373">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="530" y="186" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1600.860@0.0.1600.860" timestamp="1586314321024" />
+    <state x="530" y="186" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1600.860@0.0.1600.860" timestamp="1589829934373" />
+    <state x="425" y="23" key="CommitChangelistDialog2" timestamp="1589837334779">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="425" y="23" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1589837334779" />
     <state x="580" y="186" key="FileChooserDialogImpl" timestamp="1586218606023">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="580" y="186" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1586218606023" />
-    <state x="523" y="245" key="NewPhpClassDialog" timestamp="1586314249633">
+    <state x="523" y="245" key="NewPhpClassDialog" timestamp="1589840821745">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="523" y="245" key="NewPhpClassDialog/0.0.1600.860@0.0.1600.860" timestamp="1586314249633" />
+    <state x="523" y="245" key="NewPhpClassDialog/0.0.1600.860@0.0.1600.860" timestamp="1589840821745" />
+    <state x="392" y="164" key="Vcs.Push.Dialog.v2" timestamp="1589837342896">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="392" y="164" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1589837342896" />
   </component>
 </project>

@@ -20,4 +20,14 @@ class BoletoRepository
         $boletoModel->data_vencimento = $boleto->getDataVencimento();
         $boletoModel->save();
     }
+
+    public static function obterBoletosPorDataVencimento($data)
+    {
+        return BoletoModel::where('data_vencimento', $data)->get();
+    }
+
+    public static function deletarBoleto($id)
+    {
+        BoletoModel::where('id', $id)->delete();
+    }
 }
