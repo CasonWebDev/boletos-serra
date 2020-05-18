@@ -13,11 +13,9 @@ use setasign\Fpdi\Tfpdf;
 
 class sintetizaPdf
 {
-    public static function sintetizarPdf($file, $mes, $ano, $page)
+    public static function sintetizarPdf($file, $page)
     {
         $pdftotext_bin_path = app_path('Helpers/pdftotext/pdftotext');
-
-        $subfolder = "{$mes}/{$ano}";
 
         $boleto = new Boleto();
         $new_pdf = new Tfpdf\Fpdi();
@@ -30,19 +28,23 @@ class sintetizaPdf
 
         $contentOriginal = trim(Pdf::getText($filename, $pdftotext_bin_path, ['enc UTF-8']));
 
-        $boleto->setCpf(self::getCpf($contentOriginal));
-        $boleto->setNome(self::getNome($contentOriginal));
-        $boleto->setNossoNumero(self::getNossoNumero($contentOriginal));
-        $boleto->setDataVencimento(self::getDataVencimento($contentOriginal));
-        $boleto->setArquivo("public/pdfs/{$subfolder}/{$boleto->getNossoNumero()}.pdf");
+        try {
+            $boleto->setCpf(self::getCpf($contentOriginal));
+            $boleto->setNome(self::getNome($contentOriginal));
+            $boleto->setNossoNumero(self::getNossoNumero($contentOriginal));
+            $boleto->setDataVencimento(self::getDataVencimento($contentOriginal));
+            $boleto->setArquivo("public/pdfs/{$boleto->getReferencia()}/{$boleto->getNossoNumero()}.pdf");
+        } catch (\Exception $e) {
+            if($page % 2 == 0){
+                Storage::delete("public/pdfs/file{$page}.pdf");
+            } else {
+                throw new \Exception($e->getMessage());
+            }
+        }
 
         if($boleto->getNossoNumero() && Storage::exists($boleto->getArquivo()) === false) {
             Storage::move("public/pdfs/file{$page}.pdf", $boleto->getArquivo());
             BoletoRepository::adicionarBoleto($boleto);
-        } else {
-            if($page % 2 == 0){
-                Storage::delete("public/pdfs/file{$page}.pdf");
-            }
         }
     }
 

@@ -15,6 +15,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::middleware('serra:api')->group(function () {
-    Route::get('/processar-pdf', 'SplitPdf@processarPdf');
+    Route::post('/processar-pdf', 'SplitPdf@processarPdf');
     Route::post('/obter-boletos', 'SplitPdf@obterBoletos');
 });

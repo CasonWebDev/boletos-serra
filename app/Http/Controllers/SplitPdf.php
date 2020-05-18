@@ -2,20 +2,26 @@
 
 namespace App\Http\Controllers;
 
-use App\boletos;
 use App\Http\Services\obterBoletos;
-use App\Http\Services\SplitPdf as SplitService;
+use App\Http\Services\processaPdf;
 use Illuminate\Http\Request;
 
 class SplitPdf extends Controller
 {
+    private $processaPdf;
+
+    public function __construct(processaPdf $processaPdf)
+    {
+        $this->processaPdf = $processaPdf;
+    }
+
     public function index() {
         return view('app');
     }
 
-    public function processarPdf (Request $request, SplitService $splitPdf)
+    public function processarPdf (Request $request)
     {
-        $splitPdf->processarLotes($request->mes, $request->ano, $request->dia_vencimento);
+        $this->processaPdf->processarPdf($request);
     }
 
     public function obterBoletos(Request $request, obterBoletos $obterBoletos)
