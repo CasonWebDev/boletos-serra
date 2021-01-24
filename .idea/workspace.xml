@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7da88ee3-ff3e-4a7f-89f3-b53080bcec5d" name="Default Changelist" comment="Alteração processamento por arquivo PDF">
-      <change afterPath="$PROJECT_DIR$/app/Http/Services/deletaBoletos.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Jobs/DeletaBoletoJob.php" afterDir="false" />
+    <list default="true" id="7da88ee3-ff3e-4a7f-89f3-b53080bcec5d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Http/Services/LayoutsBoleto/Boleto.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Services/LayoutsBoleto/Contract/BoletoInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Services/LayoutsBoleto/Contract/LayoutBoletoInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Services/LayoutsBoleto/Itau.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Services/LayoutsBoleto/Remessa.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Services/LayoutsBoleto/Santander.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SplitPdf.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SplitPdf.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Repository/BoletoRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Repository/BoletoRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Services/processaPdf.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Services/processaPdf.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Services/sintetizaPdf.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Services/sintetizaPdf.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,9 +20,7 @@
   </component>
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
-    <execution>
-      <executable />
-    </execution>
+    <execution />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -138,15 +139,17 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../cavinatto" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -166,6 +169,7 @@
       </list>
     </option>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -182,7 +186,9 @@
       <workItem from="1586438186634" duration="10584000" />
       <workItem from="1586831315005" duration="600000" />
       <workItem from="1587985676741" duration="3388000" />
-      <workItem from="1589814724257" duration="11681000" />
+      <workItem from="1589814724257" duration="11931000" />
+      <workItem from="1591269455579" duration="34000" />
+      <workItem from="1611499018654" duration="7584000" />
     </task>
     <task id="LOCAL-00001" summary="Correção referencia por data de vencimento">
       <created>1587988409063</created>
@@ -205,41 +211,34 @@
       <option name="project" value="LOCAL" />
       <updated>1589837338790</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Correção obtenção de nome PDF&#10;Endpoint para deletar boletos">
+      <created>1589841562455</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1589841562455</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Correção referencia por data de vencimento" />
     <MESSAGE value="Alteração processamento por arquivo PDF" />
-    <option name="LAST_COMMIT_MESSAGE" value="Alteração processamento por arquivo PDF" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="593" y="147" key="#com.intellij.ide.util.MemberChooser" timestamp="1586631753500">
-      <screen x="0" y="0" width="1600" height="860" />
-    </state>
-    <state x="593" y="147" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860@0.0.1600.860" timestamp="1586631753500" />
-    <state x="530" y="186" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1589829934373">
-      <screen x="0" y="0" width="1600" height="860" />
-    </state>
-    <state x="530" y="186" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1600.860@0.0.1600.860" timestamp="1589829934373" />
-    <state x="425" y="23" key="CommitChangelistDialog2" timestamp="1589837334779">
-      <screen x="0" y="0" width="1600" height="860" />
-    </state>
-    <state x="425" y="23" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1589837334779" />
-    <state x="580" y="186" key="FileChooserDialogImpl" timestamp="1586218606023">
-      <screen x="0" y="0" width="1600" height="860" />
-    </state>
-    <state x="580" y="186" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1586218606023" />
-    <state x="523" y="245" key="NewPhpClassDialog" timestamp="1589840821745">
-      <screen x="0" y="0" width="1600" height="860" />
-    </state>
-    <state x="523" y="245" key="NewPhpClassDialog/0.0.1600.860@0.0.1600.860" timestamp="1589840821745" />
-    <state x="392" y="164" key="Vcs.Push.Dialog.v2" timestamp="1589837342896">
-      <screen x="0" y="0" width="1600" height="860" />
-    </state>
-    <state x="392" y="164" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1589837342896" />
+    <MESSAGE value="Correção obtenção de nome PDF&#10;Endpoint para deletar boletos" />
+    <option name="LAST_COMMIT_MESSAGE" value="Correção obtenção de nome PDF&#10;Endpoint para deletar boletos" />
   </component>
 </project>

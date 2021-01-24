@@ -10,9 +10,18 @@ use setasign\Fpdi\Tfpdf;
 
 class processaPdf
 {
-    public function processarPdf(Request $request)
+    public function prepararPdf(Request $request)
     {
-        $storaged = Storage::put('public/pdfs/tmp', $request->pdf);
+        $files = $request->file('pdf');
+
+        foreach ($files as $file) {
+            $this->processarPdf($file);
+        }
+    }
+
+    private function processarPdf($file)
+    {
+        $storaged = Storage::put('public/pdfs/tmp', $file);
         $file = storage_path('app/'.$storaged);
         $pdf = new Tfpdf\Fpdi();
         $pagecount = $pdf->setSourceFile($file);

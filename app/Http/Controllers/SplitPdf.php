@@ -24,7 +24,7 @@ class SplitPdf extends Controller
 
     public function processarPdf (Request $request)
     {
-        $this->processaPdf->processarPdf($request);
+        $this->processaPdf->prepararPdf($request);
     }
 
     public function obterBoletos(Request $request, obterBoletos $obterBoletos)
