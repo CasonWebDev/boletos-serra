@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7da88ee3-ff3e-4a7f-89f3-b53080bcec5d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Services/LayoutsBoleto/Boleto.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Services/LayoutsBoleto/Contract/BoletoInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Services/LayoutsBoleto/Contract/LayoutBoletoInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Services/LayoutsBoleto/Itau.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Services/LayoutsBoleto/Remessa.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Services/LayoutsBoleto/Santander.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SplitPdf.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SplitPdf.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Services/processaPdf.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Services/processaPdf.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Services/sintetizaPdf.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Services/sintetizaPdf.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,7 +179,7 @@
       <workItem from="1587985676741" duration="3388000" />
       <workItem from="1589814724257" duration="11931000" />
       <workItem from="1591269455579" duration="34000" />
-      <workItem from="1611499018654" duration="7584000" />
+      <workItem from="1611499018654" duration="8539000" />
     </task>
     <task id="LOCAL-00001" summary="Correção referencia por data de vencimento">
       <created>1587988409063</created>
@@ -218,7 +209,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589841562455</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Atualização suporte a boletos Santander e Itaú">
+      <created>1611510111851</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1611510111851</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -239,6 +237,7 @@
     <MESSAGE value="Correção referencia por data de vencimento" />
     <MESSAGE value="Alteração processamento por arquivo PDF" />
     <MESSAGE value="Correção obtenção de nome PDF&#10;Endpoint para deletar boletos" />
-    <option name="LAST_COMMIT_MESSAGE" value="Correção obtenção de nome PDF&#10;Endpoint para deletar boletos" />
+    <MESSAGE value="Atualização suporte a boletos Santander e Itaú" />
+    <option name="LAST_COMMIT_MESSAGE" value="Atualização suporte a boletos Santander e Itaú" />
   </component>
 </project>

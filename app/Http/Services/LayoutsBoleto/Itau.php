@@ -21,7 +21,7 @@ class Itau extends LayoutBoleto implements LayoutBoletoInterface
 
     public function getNossoNumero($text): string
     {
-        if (preg_match('/([0-9]{3}[\/][0-9]{8}[\-][0-9]{1})/i', $text, $match)) {
+        if (preg_match('/([0-9]{8}[\-][0-9]{1})/i', $text, $match)) {
             $nossoNumero = $this->normalizeText($match[1]);
             $nossoNumero = str_replace('-', '', $nossoNumero);
             $nossoNumero = str_replace('/', '', $nossoNumero);

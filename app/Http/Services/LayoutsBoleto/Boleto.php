@@ -22,7 +22,6 @@ class Boleto implements BoletoInterface
     public function obterLayoutBoleto(string $boletoString): LayoutBoletoInterface
     {
         $layout = $this->numeroBanco($boletoString);
-
         switch ($layout) {
             case "341-7":
                 return app(Itau::class);
@@ -35,8 +34,8 @@ class Boleto implements BoletoInterface
 
     public function numeroBanco(string $boletoString)
     {
-        if (preg_match('/(?<=34134607000186\n\n)((.|)*)(?=\n\n)/i', $boletoString, $match)) {
-            $numeroBanco = $this->normalizeText($match[1]);
+        if (preg_match_all('/([0-9]{3}[\-][0-9]{1})/i', $boletoString, $match)) {
+            $numeroBanco = $this->normalizeText($match[0][1]);
             return $numeroBanco;
         }
         return false;
