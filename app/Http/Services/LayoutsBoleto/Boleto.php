@@ -34,7 +34,7 @@ class Boleto implements BoletoInterface
 
     public function numeroBanco(string $boletoString)
     {
-        if (preg_match_all('/([0-9]{3}[\-][0-9]{1})/i', $boletoString, $match)) {
+        if (preg_match_all('/(?<=\n\n)([0-9]{3}[\-][0-9]{1})(?=\n\n)/i', $boletoString, $match)) {
             $numeroBanco = $this->normalizeText($match[0][1]);
             return $numeroBanco;
         }
