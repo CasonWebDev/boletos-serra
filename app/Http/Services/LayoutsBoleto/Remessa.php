@@ -17,6 +17,7 @@ class Remessa extends LayoutBoleto implements LayoutBoletoInterface
             $cpf = str_replace('.', '', $cpf);
             return str_replace('-', '', $cpf);
         }
+        return '0';
     }
 
     public function getNossoNumero($text): string
@@ -25,6 +26,7 @@ class Remessa extends LayoutBoleto implements LayoutBoletoInterface
             $nossoNumero = $this->normalizeText($match[1]);
             return str_replace('-', '', $nossoNumero);
         }
+        return '0';
     }
 
     public function getNome($text): string
@@ -32,6 +34,7 @@ class Remessa extends LayoutBoleto implements LayoutBoletoInterface
         if(preg_match('/Pagador\n(.*)[(]/', $text, $match) || preg_match('/PAGADOR\n\n(.*) [CPF]/', $text, $match)){
             return $this->normalizeText($match[1]);
         }
+        return '0';
     }
 
     public function getDataVencimento($text): string
@@ -40,5 +43,6 @@ class Remessa extends LayoutBoleto implements LayoutBoletoInterface
             $data = $this->normalizeText($match[1]);
             return Carbon::createFromFormat('d/m/Y', $data)->format('Y-m-d');
         }
+        return '0';
     }
 }

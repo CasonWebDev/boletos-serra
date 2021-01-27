@@ -34,14 +34,14 @@ class Boleto implements BoletoInterface
 
     public function numeroBanco(string $boletoString)
     {
-        if (preg_match_all('/(?<=\n\n)([0-9]{3}[\-][0-9]{1})(?=\n\n)/i', $boletoString, $match)) {
-            $numeroBanco = $this->normalizeText($match[0][1]);
+        if (preg_match('/(?<=\n\n)([0-9]{3}[\-][0-9]{1})/i', $boletoString, $match)) {
+            $numeroBanco = $this->normalizeText($match[1]);
             return $numeroBanco;
         }
         return false;
     }
 
-    public function boleto(string $boletoString, int $page)
+    public function boleto(string $boletoString, int $page, string $file)
     {
         $this->boleto->setCpf($this->getCpf($boletoString));
         $this->boleto->setNome($this->getNome($boletoString));

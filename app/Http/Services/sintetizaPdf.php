@@ -28,7 +28,7 @@ class sintetizaPdf
 
         try {
             $boleto = $layoutBoleto->obterLayoutBoleto($contentOriginal);
-            $boleto->boleto($contentOriginal, $page);
+            $boleto->boleto($contentOriginal, $page, $file);
         } catch (\Exception $e) {
             if($page % 2 == 0){
                 Storage::delete("public/pdfs/file{$page}.pdf");
