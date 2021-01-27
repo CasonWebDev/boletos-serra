@@ -54,7 +54,7 @@ class Boleto implements BoletoInterface
 
     public function salvarBoleto(BoletoClass $boleto, $page)
     {
-        if($boleto->getNossoNumero() && Storage::exists($boleto->getArquivo()) === false) {
+        if($boleto->getNossoNumero()) {
             Storage::move("public/pdfs/file{$page}.pdf", $boleto->getArquivo());
             BoletoRepository::adicionarBoleto($boleto);
         }
