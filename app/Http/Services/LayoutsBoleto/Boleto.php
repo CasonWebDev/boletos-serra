@@ -47,7 +47,7 @@ class Boleto implements BoletoInterface
         $this->boleto->setNome($this->getNome($boletoString));
         $this->boleto->setNossoNumero($this->getNossoNumero($boletoString));
         $this->boleto->setDataVencimento($this->getDataVencimento($boletoString));
-        $this->boleto->setArquivo("public/pdfs/{$this->boleto->getReferencia()}/{$this->boleto->getNossoNumero()}.pdf");
+        $this->boleto->setArquivo("public/pdfs/{$this->boleto->getReferencia()}/{$this->boleto->getCpf()}.pdf");
 
         $this->salvarBoleto($this->boleto, $page);
     }
