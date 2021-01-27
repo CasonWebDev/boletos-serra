@@ -16,7 +16,8 @@
         "laravel/framework": "^7.0",
         "laravel/tinker": "^2.0",
         "setasign/fpdi": "^2.3",
-        "setasign/tfpdf": "^1.31"
+        "setasign/tfpdf": "^1.31",
+        "zanysoft/laravel-zip": "^1.0"
     },
     "require-dev": {
         "facade/ignition": "^2.0",

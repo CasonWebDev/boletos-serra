@@ -7,22 +7,31 @@ use Illuminate\Http\Request;
 use App\Jobs\processaPdfJob;
 use Illuminate\Support\Facades\Storage;
 use setasign\Fpdi\Tfpdf;
+use Zip;
 
 class processaPdf
 {
     public function prepararPdf(Request $request)
     {
         $files = $request->file('pdf');
+        $folder = now()->timestamp;
+        $zip = Zip::open($files);
+        $filesList = $zip->listFiles();
 
-        foreach ($files as $file) {
-            $this->processarPdf($file);
+        $is_valid = Zip::check($files);
+
+        if ($is_valid) {
+            $zip->extract(storage_path('app/tmp/'.$folder));
+        }
+
+        foreach ($filesList as $file) {
+            $this->processarPdf($file, $folder);
         }
     }
 
-    private function processarPdf($file)
+    private function processarPdf($file, $folder)
     {
-        $storaged = Storage::put('public/pdfs/tmp', $file);
-        $file = storage_path('app/'.$storaged);
+        $file = storage_path('app/tmp/'.$folder.'/'.$file);
         $pdf = new Tfpdf\Fpdi();
         $pagecount = $pdf->setSourceFile($file);
 
