@@ -49,16 +49,16 @@ class Boleto implements BoletoInterface
         $this->boleto->setDataVencimento($this->getDataVencimento($boletoString));
         $this->boleto->setArquivo("public/pdfs/{$this->boleto->getReferencia()}/{$this->boleto->getCpf()}.pdf");
 
-        $this->salvarBoleto($this->boleto, $page);
+        $this->salvarBoleto($page);
     }
 
-    public function salvarBoleto(BoletoClass $boleto, $page)
+    public function salvarBoleto($page)
     {
-        if($boleto->getNossoNumero()) {
-            if(Storage::exists($boleto->getArquivo()) === false) {
-                Storage::move("public/pdfs/file{$page}.pdf", $boleto->getArquivo());
+        if($this->boleto->getCpf()) {
+            if(Storage::exists($this->boleto->getArquivo()) === false) {
+                Storage::move("public/pdfs/file{$page}.pdf", $this->boleto->getArquivo());
             }
-            BoletoRepository::adicionarBoleto($boleto);
+            BoletoRepository::adicionarBoleto($this->boleto);
         }
     }
 
