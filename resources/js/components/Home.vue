@@ -25,11 +25,24 @@
                 entre em contato através do nosso whatsapp <a href="https://bit.ly/2UuHy6g" target="_blank">19 99240 6881</a>
                 ou pelo e-mail <a href="mailto:">cobranca@gruposerra.com.br</a></p>
         </div>
+        <vue-easy-lightbox
+        escDisabled
+        moveDisabled
+        :visible="visible"
+        :imgs="imgs"
+        :index="index"
+        @hide="handleHide"
+        >
+        <template v-slot:toolbar="{ toolbarMethods }">
+            <br>
+        </template>
+        </vue-easy-lightbox>
     </div>
 </template>
 <script>
     import axios from 'axios'
     import {TheMask} from 'vue-the-mask'
+    import VueEasyLightbox from 'vue-easy-lightbox'
     import loadingSpinner from '../../img/loading.svg'
     export default {
         data() {
@@ -40,14 +53,30 @@
                 cliente: null,
                 error: false,
                 cpf: null,
-                loadingSpinner
+                loadingSpinner,
+                imgs: '', // Img Url , string or Array of string
+                visible: false,
+                index: 0 // default: 0
             };
         },
         components: {
-            TheMask
+            TheMask,
+            VueEasyLightbox
         },
         methods: {
+            popUp() {
+                console.log('popup');
+                this.imgs = '/images/popup.jpeg'
+                this.show();
+            },
+            show() {
+                this.visible = true
+            },
+            handleHide() {
+            this.visible = false
+            },
             obterBoletos() {
+                this.popUp();
                 this.initial = false;
                 this.loading = true;
                 axios
@@ -56,7 +85,6 @@
                         'cpf': this.cpf
                     })
                     .then(response => {
-                        console.log(response);
                         if(response.data.length === 0){
                             this.error = true;
                         } else {
