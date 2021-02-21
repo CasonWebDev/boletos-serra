@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Jobs\processaPdfJob;
 use Illuminate\Support\Facades\Storage;
 use setasign\Fpdi\Tfpdf;
-use Zip;
+use ZanySoft\Zip\Zip;
 
 class processaPdf
 {

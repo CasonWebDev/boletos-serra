@@ -2,7 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7da88ee3-ff3e-4a7f-89f3-b53080bcec5d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Http/Services/LayoutsBoleto/ItauCarne.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Services/LayoutsBoleto/SantanderCarne.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Services/salvaPdf.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/laravel.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/laravel.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Services/LayoutsBoleto/Boleto.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Services/LayoutsBoleto/Boleto.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Services/processaPdf.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Services/processaPdf.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Services/sintetizaPdf.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Services/sintetizaPdf.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Jobs/processaPdfJob.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Jobs/processaPdfJob.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,6 +133,7 @@
       <path value="$PROJECT_DIR$/vendor/setasign/fpdi" />
       <path value="$PROJECT_DIR$/vendor/setasign/tfpdf" />
       <path value="$PROJECT_DIR$/vendor/casonwebdev/pdf-to-text" />
+      <path value="$PROJECT_DIR$/vendor/zanysoft/laravel-zip" />
     </include_path>
   </component>
   <component name="ProjectId" id="1a3wplnldtuC8STrDDOvlD97Ttc" />
@@ -137,10 +147,15 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Services/LayoutsBoleto" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\PC\Desktop2019\sites\serra-boletos\laravel\app\Http\Services\LayoutsBoleto" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -180,6 +195,7 @@
       <workItem from="1589814724257" duration="11931000" />
       <workItem from="1591269455579" duration="34000" />
       <workItem from="1611499018654" duration="8539000" />
+      <workItem from="1613914287920" duration="12036000" />
     </task>
     <task id="LOCAL-00001" summary="Correção referencia por data de vencimento">
       <created>1587988409063</created>
@@ -232,6 +248,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Correção referencia por data de vencimento" />

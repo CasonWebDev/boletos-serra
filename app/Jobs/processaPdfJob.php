@@ -14,6 +14,8 @@ class processaPdfJob implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
+    /** @var sintetizaPdf $sintetizaPdf */
+    private $sintetizaPdf;
     private $file;
     private $page;
 
@@ -27,6 +29,7 @@ class processaPdfJob implements ShouldQueue
      */
     public function __construct($file, $page)
     {
+        $this->sintetizaPdf = app(sintetizaPdf::class);
         $this->file = $file;
         $this->page = $page;
     }
@@ -38,6 +41,6 @@ class processaPdfJob implements ShouldQueue
      */
     public function handle()
     {
-        sintetizaPdf::sintetizarPdf($this->file, $this->page);
+        $this->sintetizaPdf->sintetizarPdf($this->file, $this->page);
     }
 }

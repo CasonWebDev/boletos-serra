@@ -19,13 +19,19 @@ class Boleto implements BoletoInterface
         $this->boleto = $boleto;
     }
 
-    public function obterLayoutBoleto(string $boletoString): LayoutBoletoInterface
+    public function obterLayoutBoleto(string $boletoString, $carne = false): LayoutBoletoInterface
     {
         $layout = $this->numeroBanco($boletoString);
         switch ($layout) {
             case "341-7":
+                if ($carne) {
+                    return app(ItauCarne::class);
+                }
                 return app(Itau::class);
             case "033-7":
+                if ($carne) {
+                    return app(SantanderCarne::class);
+                }
                 return app(Santander::class);
             default:
                 return app(Remessa::class);
