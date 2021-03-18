@@ -1,13 +1,1 @@
-body {
-  margin: 0;
-  padding: 0;
-  background-color: #f7f7f6;
-}
-
-body * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Lato", sans-serif;
-}
-
+body{background-color:#f7f7f6}body,body *{margin:0;padding:0}body *{box-sizing:border-box;font-family:Lato,sans-serif}

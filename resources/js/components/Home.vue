@@ -76,7 +76,7 @@
             this.visible = false
             },
             obterBoletos() {
-                this.popUp();
+//                this.popUp();
                 this.initial = false;
                 this.loading = true;
                 axios
